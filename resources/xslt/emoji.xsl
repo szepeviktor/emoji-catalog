@@ -6,15 +6,6 @@
 
   <xsl:template match="/">
     <xsl:for-each select="//table//tr[./td//img]">
-      <xsl:text>    /**&#10;</xsl:text>
-      <xsl:text>     * </xsl:text>
-      <xsl:call-template name="get-name"/>
-      <xsl:text>&#10;</xsl:text>
-      <xsl:text>     *&#10;</xsl:text>
-      <xsl:text>     * Code point(s): </xsl:text>
-      <xsl:call-template name="get-code"/>
-      <xsl:text>&#10;</xsl:text>
-      <xsl:text>     */&#10;</xsl:text>
       <xsl:text>    const </xsl:text>
       <xsl:call-template name="get-constant-name"/>
       <xsl:text> = "</xsl:text>
